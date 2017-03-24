@@ -1,0 +1,58 @@
+# OSX Noise
+*.swp
+*.out*
+*.pyc
+
+#pod stuff
+Projects/Podfile.lock
+Pod/
+Pods/
+Pod/*
+Pods/*
+
+#Frank stuff
+*/Frank/lib*.*
+frank_static_resources.bundle/
+
+#Calabash
+*calabash_drishyam.*
+Nordstrom-iPhone/Calabash/build/
+Nordstrom-iPhone/Calabash/failed.txt
+
+# Xcode
+.DS_Store
+build/*
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+xcuserdata/*
+*.xccheckout
+*.xcscmblueprint
+*.xcworkspacedata
+frankified_build/
+Nordstrom-iPhone/Frank/frank.xcconfig
+Nordstrom-iPhone/Frank/features/my_first.feature
+Nordstrom-iPhone/Frank/features/step_definitions/launch_steps.rb
+Nordstrom-iPhone/Frank/features/support/env.rb
+doxygen_output/
+
+# Nordstrom
+data.json
+index.html
+
+# Ruby
+.bundle/
+bin/
+
