@@ -14,6 +14,9 @@
 		0DE1FCA61E85B49A003F4023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCA51E85B49A003F4023 /* Assets.xcassets */; };
 		0DE1FCA91E85B49A003F4023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCA71E85B49A003F4023 /* LaunchScreen.storyboard */; };
 		0DE1FCB41E85B49A003F4023 /* KSPromisePlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCB31E85B49A003F4023 /* KSPromisePlaygroundTests.m */; };
+		0DE1FCBF1E85B570003F4023 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCBE1E85B570003F4023 /* Podfile */; };
+		6348FCCD9CE49E3010261139 /* libPods-KSPromisePlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0364646F8D24C05134BF84C9 /* libPods-KSPromisePlayground.a */; };
+		B11FDE9F647240C8AD9C75B8 /* libPods-KSPromisePlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A28B46F3DD9FD031A21FBF86 /* libPods-KSPromisePlaygroundTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0364646F8D24C05134BF84C9 /* libPods-KSPromisePlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSPromisePlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE1FC961E85B49A003F4023 /* KSPromisePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSPromisePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE1FC9A1E85B49A003F4023 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DE1FC9C1E85B49A003F4023 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +44,12 @@
 		0DE1FCAF1E85B49A003F4023 /* KSPromisePlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSPromisePlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE1FCB31E85B49A003F4023 /* KSPromisePlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPromisePlaygroundTests.m; sourceTree = "<group>"; };
 		0DE1FCB51E85B49A003F4023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE1FCBE1E85B570003F4023 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		204CD7D3B0F50C2E6535F2F6 /* Pods-KSPromisePlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPromisePlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSPromisePlayground/Pods-KSPromisePlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		82E8440C84C68308931C578F /* Pods-KSPromisePlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPromisePlaygroundTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSPromisePlaygroundTests/Pods-KSPromisePlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
+		A28B46F3DD9FD031A21FBF86 /* libPods-KSPromisePlaygroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSPromisePlaygroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8594C9DBC8C3D966101DB19 /* Pods-KSPromisePlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPromisePlaygroundTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSPromisePlaygroundTests/Pods-KSPromisePlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1DD1FB1401925A8B4DAFDB3 /* Pods-KSPromisePlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPromisePlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSPromisePlayground/Pods-KSPromisePlayground.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6348FCCD9CE49E3010261139 /* libPods-KSPromisePlayground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11FDE9F647240C8AD9C75B8 /* libPods-KSPromisePlaygroundTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +78,9 @@
 				0DE1FC981E85B49A003F4023 /* KSPromisePlayground */,
 				0DE1FCB21E85B49A003F4023 /* KSPromisePlaygroundTests */,
 				0DE1FC971E85B49A003F4023 /* Products */,
+				0DE1FCBE1E85B570003F4023 /* Podfile */,
+				9874937AB103B581E0DACC00 /* Pods */,
+				8D87D9E02625E4650F7626F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +126,26 @@
 			path = KSPromisePlaygroundTests;
 			sourceTree = "<group>";
 		};
+		8D87D9E02625E4650F7626F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0364646F8D24C05134BF84C9 /* libPods-KSPromisePlayground.a */,
+				A28B46F3DD9FD031A21FBF86 /* libPods-KSPromisePlaygroundTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9874937AB103B581E0DACC00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				204CD7D3B0F50C2E6535F2F6 /* Pods-KSPromisePlayground.debug.xcconfig */,
+				F1DD1FB1401925A8B4DAFDB3 /* Pods-KSPromisePlayground.release.xcconfig */,
+				A8594C9DBC8C3D966101DB19 /* Pods-KSPromisePlaygroundTests.debug.xcconfig */,
+				82E8440C84C68308931C578F /* Pods-KSPromisePlaygroundTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE1FCB81E85B49A003F4023 /* Build configuration list for PBXNativeTarget "KSPromisePlayground" */;
 			buildPhases = (
+				3FE855C874E9888C3E8954A1 /* 📦 Check Pods Manifest.lock */,
 				0DE1FC921E85B49A003F4023 /* Sources */,
 				0DE1FC931E85B49A003F4023 /* Frameworks */,
 				0DE1FC941E85B49A003F4023 /* Resources */,
+				8E12717AC18DF2DF0DC31670 /* 📦 Embed Pods Frameworks */,
+				4ACDC5A46E9F125B23282DCD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE1FCBB1E85B49A003F4023 /* Build configuration list for PBXNativeTarget "KSPromisePlaygroundTests" */;
 			buildPhases = (
+				92F9662541CBE54651C92548 /* 📦 Check Pods Manifest.lock */,
 				0DE1FCAB1E85B49A003F4023 /* Sources */,
 				0DE1FCAC1E85B49A003F4023 /* Frameworks */,
 				0DE1FCAD1E85B49A003F4023 /* Resources */,
+				838F47E050D3799BC1963560 /* 📦 Embed Pods Frameworks */,
+				54152E82B00EE7835B47B290 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +238,7 @@
 			files = (
 				0DE1FCA91E85B49A003F4023 /* LaunchScreen.storyboard in Resources */,
 				0DE1FCA61E85B49A003F4023 /* Assets.xcassets in Resources */,
+				0DE1FCBF1E85B570003F4023 /* Podfile in Resources */,
 				0DE1FCA41E85B49A003F4023 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +251,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FE855C874E9888C3E8954A1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4ACDC5A46E9F125B23282DCD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KSPromisePlayground/Pods-KSPromisePlayground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54152E82B00EE7835B47B290 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KSPromisePlaygroundTests/Pods-KSPromisePlaygroundTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		838F47E050D3799BC1963560 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KSPromisePlaygroundTests/Pods-KSPromisePlaygroundTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E12717AC18DF2DF0DC31670 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KSPromisePlayground/Pods-KSPromisePlayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92F9662541CBE54651C92548 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0DE1FC921E85B49A003F4023 /* Sources */ = {
@@ -351,6 +486,7 @@
 		};
 		0DE1FCB91E85B49A003F4023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204CD7D3B0F50C2E6535F2F6 /* Pods-KSPromisePlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62B6EKFTEH;
@@ -363,6 +499,7 @@
 		};
 		0DE1FCBA1E85B49A003F4023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1DD1FB1401925A8B4DAFDB3 /* Pods-KSPromisePlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62B6EKFTEH;
@@ -375,6 +512,7 @@
 		};
 		0DE1FCBC1E85B49A003F4023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8594C9DBC8C3D966101DB19 /* Pods-KSPromisePlaygroundTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 62B6EKFTEH;
@@ -388,6 +526,7 @@
 		};
 		0DE1FCBD1E85B49A003F4023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E8440C84C68308931C578F /* Pods-KSPromisePlaygroundTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 62B6EKFTEH;
@@ -418,6 +557,7 @@
 				0DE1FCBA1E85B49A003F4023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DE1FCBB1E85B49A003F4023 /* Build configuration list for PBXNativeTarget "KSPromisePlaygroundTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +566,7 @@
 				0DE1FCBD1E85B49A003F4023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

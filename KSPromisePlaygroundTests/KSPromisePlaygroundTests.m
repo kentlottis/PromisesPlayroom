@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KSDeferred.h"
 
 @interface KSPromisePlaygroundTests : XCTestCase
 
@@ -25,8 +26,10 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    KSDeferred *target = [KSDeferred defer];
+    [target resolveWithValue:@"Kent"];
+    XCTAssertEqual(target.promise.value, @"Kent");
+
 }
 
 @end
