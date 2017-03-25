@@ -14,6 +14,7 @@
 #import "ImprovedCacheModel.h"
 #import "ObviouslyStupidAssetConsumer.h"
 #import "ProperCacheModel.h"
+#import "JoinProvider.h"
 #import "KSDeferred.h"
 
 @interface KSPromisePlaygroundTests : XCTestCase
@@ -23,7 +24,7 @@
 
 
 // Fails with timeout because the stupid consumer make two requests but the source only has one asset
-- (void) testUsingUncachedSourceWithInsufficientAssets {
+- (void) xtestUsingUncachedSourceWithInsufficientAssets {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     ObviouslyStupidAssetConsumer * target = [[ObviouslyStupidAssetConsumer alloc] initWithProvider:source];
@@ -42,7 +43,7 @@
 }
 
 // Fails with undesired output because the stupid consumer pull two different results from the source instead of using a single value
-- (void) testUsingUncachedSource {
+- (void) xtestUsingUncachedSource {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     ObviouslyStupidAssetConsumer * target = [[ObviouslyStupidAssetConsumer alloc] initWithProvider:source];
@@ -62,7 +63,7 @@
 }
 
 // Fails in the simple-minded broke cache because of NSEnumerable semantics
-- (void) testUsingBrokenCachedSource {
+- (void) xtestUsingBrokenCachedSource {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     BrokenCacheModel *provider = [[BrokenCacheModel alloc] initWithProvider:source];
@@ -159,4 +160,23 @@
     [self waitForExpectationsWithTimeout:1 handler:nil];
 }
 
+- (void) testJoinProviderHappyCase {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *oneSource = [[AssetSource alloc] init];
+    AssetSource *anotherSource = [[AssetSource alloc] init];
+    JoinProvider *target = [[JoinProvider alloc] initWithProvider:oneSource andProvider:anotherSource];
+
+    [oneSource provideAsset:@"Horse"];
+    [anotherSource provideAsset:@"Cow"];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"[Horse + Cow]");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
 @end

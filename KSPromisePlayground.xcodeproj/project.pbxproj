@@ -27,6 +27,8 @@
 		0DE1FCD81E85F7EF003F4023 /* ProperCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCD61E85F7EF003F4023 /* ProperCacheModel.m */; };
 		0DE1FCDB1E85F874003F4023 /* ObviouslyStupidAssetConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCDA1E85F874003F4023 /* ObviouslyStupidAssetConsumer.m */; };
 		0DE1FCDC1E85F874003F4023 /* ObviouslyStupidAssetConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCDA1E85F874003F4023 /* ObviouslyStupidAssetConsumer.m */; };
+		0DE1FCDF1E86021A003F4023 /* JoinProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCDE1E86021A003F4023 /* JoinProvider.m */; };
+		0DE1FCE01E86021A003F4023 /* JoinProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCDE1E86021A003F4023 /* JoinProvider.m */; };
 		6348FCCD9CE49E3010261139 /* libPods-KSPromisePlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0364646F8D24C05134BF84C9 /* libPods-KSPromisePlayground.a */; };
 		B11FDE9F647240C8AD9C75B8 /* libPods-KSPromisePlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A28B46F3DD9FD031A21FBF86 /* libPods-KSPromisePlaygroundTests.a */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		0DE1FCD61E85F7EF003F4023 /* ProperCacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProperCacheModel.m; sourceTree = "<group>"; };
 		0DE1FCD91E85F874003F4023 /* ObviouslyStupidAssetConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObviouslyStupidAssetConsumer.h; sourceTree = "<group>"; };
 		0DE1FCDA1E85F874003F4023 /* ObviouslyStupidAssetConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObviouslyStupidAssetConsumer.m; sourceTree = "<group>"; };
+		0DE1FCDD1E86021A003F4023 /* JoinProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinProvider.h; sourceTree = "<group>"; };
+		0DE1FCDE1E86021A003F4023 /* JoinProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinProvider.m; sourceTree = "<group>"; };
 		204CD7D3B0F50C2E6535F2F6 /* Pods-KSPromisePlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPromisePlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSPromisePlayground/Pods-KSPromisePlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		82E8440C84C68308931C578F /* Pods-KSPromisePlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPromisePlaygroundTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSPromisePlaygroundTests/Pods-KSPromisePlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 		A28B46F3DD9FD031A21FBF86 /* libPods-KSPromisePlaygroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSPromisePlaygroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,8 @@
 				0DE1FCD61E85F7EF003F4023 /* ProperCacheModel.m */,
 				0DE1FCD91E85F874003F4023 /* ObviouslyStupidAssetConsumer.h */,
 				0DE1FCDA1E85F874003F4023 /* ObviouslyStupidAssetConsumer.m */,
+				0DE1FCDD1E86021A003F4023 /* JoinProvider.h */,
+				0DE1FCDE1E86021A003F4023 /* JoinProvider.m */,
 			);
 			name = PromiseExamples;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE1FCDF1E86021A003F4023 /* JoinProvider.m in Sources */,
 				0DE1FCD31E85F74B003F4023 /* ImprovedCacheModel.m in Sources */,
 				0DE1FCA11E85B49A003F4023 /* ViewController.m in Sources */,
 				0DE1FCCF1E85F65C003F4023 /* BrokenCacheModel.m in Sources */,
@@ -424,6 +431,7 @@
 				0DE1FCDC1E85F874003F4023 /* ObviouslyStupidAssetConsumer.m in Sources */,
 				0DE1FCCC1E85F59F003F4023 /* AssetProviderBase.m in Sources */,
 				0DE1FCD41E85F74B003F4023 /* ImprovedCacheModel.m in Sources */,
+				0DE1FCE01E86021A003F4023 /* JoinProvider.m in Sources */,
 				0DE1FCC81E85F4E7003F4023 /* AssetSource.m in Sources */,
 				0DE1FCD81E85F7EF003F4023 /* ProperCacheModel.m in Sources */,
 				0DE1FCD01E85F65C003F4023 /* BrokenCacheModel.m in Sources */,
