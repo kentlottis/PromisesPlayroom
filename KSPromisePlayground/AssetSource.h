@@ -3,5 +3,4 @@
 
 @interface AssetSource: NSObject<AssetProviderProtocol>
 -(void) provideAsset: (NSString *) asset;
-@property (nonatomic, assign, readonly) NSInteger totalPromises;
 @end

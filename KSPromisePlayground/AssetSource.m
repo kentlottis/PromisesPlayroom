@@ -5,7 +5,6 @@
 
 
 @interface AssetSource()
-@property (nonatomic, assign, readwrite) NSInteger totalPromises;
 @property (nonatomic, strong) KSDeferred *deferred;
 @property (nonatomic, strong) NSMutableArray<NSString*>*assetQueue;
 @property (nonatomic, strong) NSMutableArray<KSDeferred*>*deferredQueue;
@@ -18,7 +17,6 @@
         _deferred = [KSDeferred defer];
         _assetQueue = [NSMutableArray array];
         _deferredQueue = [NSMutableArray array];
-        _totalPromises = 0;
     }
     return self;
 }
@@ -27,7 +25,6 @@
     KSDeferred *deferred = [KSDeferred defer];
     [self.deferredQueue addObject:deferred];
     [self resolvePromises];
-    self.totalPromises += 1;
     return deferred.promise;
 }
 
