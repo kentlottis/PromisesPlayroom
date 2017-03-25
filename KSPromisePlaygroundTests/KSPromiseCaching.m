@@ -1,8 +1,9 @@
 /*
  TODO:
-  - Create a NaiveConsumer that combines two promies
-  - Build up the repro case so it's more realistic and less obviously broken
- 
+
+ * Set up a convention to easily identify "expected-but-undesirable" behaviors.
+   We want all of our tests to pass (normally), but also an easy way of identifying the shortcomings of non-ideal approaches.
+
  */
 
 #import <XCTest/XCTest.h>

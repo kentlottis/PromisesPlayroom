@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D22A0C11E86C8D80010B1A2 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 0D22A0C01E86C8D80010B1A2 /* README */; };
 		0DE1FC9B1E85B49A003F4023 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FC9A1E85B49A003F4023 /* main.m */; };
 		0DE1FC9E1E85B49A003F4023 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FC9D1E85B49A003F4023 /* AppDelegate.m */; };
 		0DE1FCA11E85B49A003F4023 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCA01E85B49A003F4023 /* ViewController.m */; };
 		0DE1FCA41E85B49A003F4023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCA21E85B49A003F4023 /* Main.storyboard */; };
 		0DE1FCA61E85B49A003F4023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCA51E85B49A003F4023 /* Assets.xcassets */; };
 		0DE1FCA91E85B49A003F4023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCA71E85B49A003F4023 /* LaunchScreen.storyboard */; };
-		0DE1FCB41E85B49A003F4023 /* KSPromisePlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCB31E85B49A003F4023 /* KSPromisePlaygroundTests.m */; };
+		0DE1FCB41E85B49A003F4023 /* KSPromiseCaching.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCB31E85B49A003F4023 /* KSPromiseCaching.m */; };
 		0DE1FCBF1E85B570003F4023 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCBE1E85B570003F4023 /* Podfile */; };
 		0DE1FCC71E85F4E7003F4023 /* AssetSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCC61E85F4E7003F4023 /* AssetSource.m */; };
 		0DE1FCC81E85F4E7003F4023 /* AssetSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCC61E85F4E7003F4023 /* AssetSource.m */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0364646F8D24C05134BF84C9 /* libPods-KSPromisePlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSPromisePlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D22A0C01E86C8D80010B1A2 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		0DE1FC961E85B49A003F4023 /* KSPromisePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSPromisePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE1FC9A1E85B49A003F4023 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DE1FC9C1E85B49A003F4023 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		0DE1FCA81E85B49A003F4023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DE1FCAA1E85B49A003F4023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE1FCAF1E85B49A003F4023 /* KSPromisePlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSPromisePlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DE1FCB31E85B49A003F4023 /* KSPromisePlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPromisePlaygroundTests.m; sourceTree = "<group>"; };
+		0DE1FCB31E85B49A003F4023 /* KSPromiseCaching.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPromiseCaching.m; sourceTree = "<group>"; };
 		0DE1FCB51E85B49A003F4023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE1FCBE1E85B570003F4023 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0DE1FCC41E85F3BF003F4023 /* AssetSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetSource.h; sourceTree = "<group>"; };
@@ -101,9 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D22A0C31E86C9C10010B1A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1FCB51E85B49A003F4023 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		0DE1FC8D1E85B49A003F4023 = {
 			isa = PBXGroup;
 			children = (
+				0D22A0C01E86C8D80010B1A2 /* README */,
 				0DE1FC981E85B49A003F4023 /* KSPromisePlayground */,
 				0DE1FCB21E85B49A003F4023 /* KSPromisePlaygroundTests */,
 				0DE1FC971E85B49A003F4023 /* Products */,
@@ -143,8 +154,8 @@
 		0DE1FCB21E85B49A003F4023 /* KSPromisePlaygroundTests */ = {
 			isa = PBXGroup;
 			children = (
-				0DE1FCB31E85B49A003F4023 /* KSPromisePlaygroundTests.m */,
-				0DE1FCB51E85B49A003F4023 /* Info.plist */,
+				0DE1FCB31E85B49A003F4023 /* KSPromiseCaching.m */,
+				0D22A0C31E86C9C10010B1A2 /* Supporting Files */,
 			);
 			path = KSPromisePlaygroundTests;
 			sourceTree = "<group>";
@@ -296,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D22A0C11E86C8D80010B1A2 /* README in Resources */,
 				0DE1FCA91E85B49A003F4023 /* LaunchScreen.storyboard in Resources */,
 				0DE1FCA61E85B49A003F4023 /* Assets.xcassets in Resources */,
 				0DE1FCBF1E85B570003F4023 /* Podfile in Resources */,
@@ -427,7 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE1FCB41E85B49A003F4023 /* KSPromisePlaygroundTests.m in Sources */,
+				0DE1FCB41E85B49A003F4023 /* KSPromiseCaching.m in Sources */,
 				0DE1FCDC1E85F874003F4023 /* ObviouslyStupidAssetConsumer.m in Sources */,
 				0DE1FCCC1E85F59F003F4023 /* AssetProviderBase.m in Sources */,
 				0DE1FCD41E85F74B003F4023 /* ImprovedCacheModel.m in Sources */,
