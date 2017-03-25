@@ -140,7 +140,7 @@
     [self waitForExpectationsWithTimeout:1 handler:nil];
 }
 
-- (void) testUsingProperCachedSource {
+- (void) testUsingProperCachedSource_WhenWaiting {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     ProperCacheModel *provider = [[ProperCacheModel alloc] initWithProvider:source];
@@ -158,7 +158,7 @@
     [self waitForExpectationsWithTimeout:1 handler:nil];
 }
 
-- (void) testUsingProperCachedSourceWhenPreloaded {
+- (void) testUsingProperCachedSource_WhenPreloaded {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     ProperCacheModel *provider = [[ProperCacheModel alloc] initWithProvider:source];
@@ -296,6 +296,46 @@
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     BrokenCacheModel *provider = [[BrokenCacheModel alloc] initWithProvider:source];
+    JoinProvider *target = [[JoinProvider alloc] initWithProvider:provider andProvider:provider];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"[Horse + Horse]");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [source provideAsset:@"Horse"];
+    [source provideAsset:@"Cow"];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
+- (void) testJoinProviderHappyCase_WithImprovedCache_WhenPreloaded {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    id<AssetProviderProtocol> provider = [[ImprovedCacheModel alloc] initWithProvider:source];
+    JoinProvider *target = [[JoinProvider alloc] initWithProvider:provider andProvider:provider];
+
+    [source provideAsset:@"Horse"];
+    [source provideAsset:@"Cow"];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"[Horse + Horse]");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
+- (void) testJoinProviderHappyCase_WithImprovedCache_WhenWaiting {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    id<AssetProviderProtocol> provider = [[ImprovedCacheModel alloc] initWithProvider:source];
     JoinProvider *target = [[JoinProvider alloc] initWithProvider:provider andProvider:provider];
 
     [target.promiseForAsset then:^id (NSString * value) {
