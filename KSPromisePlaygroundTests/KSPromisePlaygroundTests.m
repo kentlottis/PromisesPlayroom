@@ -62,7 +62,7 @@
 }
 
 // Fails in the simple-minded broke cache because of NSEnumerable semantics
-- (void) xtestUsingBrokenCachedSource {
+- (void) xtestUsingBrokenCachedSourceWhenWaiting {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     BrokenCacheModel *provider = [[BrokenCacheModel alloc] initWithProvider:source];
@@ -81,7 +81,27 @@
     [self waitForExpectationsWithTimeout:1 handler:nil];
 }
 
-- (void) testUsingFixedCachedSource {
+- (void) testUsingBrokenCachedSourceWhenPreloaded {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    BrokenCacheModel *provider = [[BrokenCacheModel alloc] initWithProvider:source];
+    ObviouslyStupidAssetConsumer * target = [[ObviouslyStupidAssetConsumer alloc] initWithProvider:provider];
+
+    [source provideAsset:@"Barney"];
+    [source provideAsset:@"Fred"];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"Barney+Fred");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
+- (void) testUsingImprovedCacheSourceWhenWaitingForSource {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     ImprovedCacheModel *provider = [[ImprovedCacheModel alloc] initWithProvider:source];
@@ -98,7 +118,29 @@
 
     [self waitForExpectationsWithTimeout:1 handler:nil];
 }
-- (void) testUsingWorkingCachedSource {
+
+- (void) testUsingImprovedCacheSourceWhenSourceIsPreloaded {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    ImprovedCacheModel *provider = [[ImprovedCacheModel alloc] initWithProvider:source];
+    ObviouslyStupidAssetConsumer * target = [[ObviouslyStupidAssetConsumer alloc] initWithProvider:provider];
+    [source provideAsset:@"Barney"];
+    [source provideAsset:@"Fred"];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"Barney+Barney");
+
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
+- (void) testUsingProperCachedSource {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     ProperCacheModel *provider = [[ProperCacheModel alloc] initWithProvider:source];
@@ -116,7 +158,26 @@
     [self waitForExpectationsWithTimeout:1 handler:nil];
 }
 
-- (void) testUsingWorkingCachedSourceWithIntermediateClear {
+- (void) testUsingProperCachedSourceWhenPreloaded {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    ProperCacheModel *provider = [[ProperCacheModel alloc] initWithProvider:source];
+    ObviouslyStupidAssetConsumer * target = [[ObviouslyStupidAssetConsumer alloc] initWithProvider:provider];
+
+    [source provideAsset:@"Barney"];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"Barney+Barney");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
+- (void) testUsingProperCachedSourceWithIntermediateClear {
     XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
     AssetSource *source = [[AssetSource alloc] init];
     ProperCacheModel *provider = [[ProperCacheModel alloc] initWithProvider:source];
@@ -172,4 +233,83 @@
 
     [self waitForExpectationsWithTimeout:1 handler:nil];
 }
+
+- (void) testJoinProviderHappyCaseUncached {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    JoinProvider *target = [[JoinProvider alloc] initWithProvider:source andProvider:source];
+
+    [source provideAsset:@"Horse"];
+    [source provideAsset:@"Cow"];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"[Horse + Cow]");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
+- (void) testJoinProviderHappyCase_WithProperCache {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    ProperCacheModel *provider = [[ProperCacheModel alloc] initWithProvider:source];
+    JoinProvider *target = [[JoinProvider alloc] initWithProvider:provider andProvider:provider];
+
+    [source provideAsset:@"Horse"];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"[Horse + Horse]");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
+- (void) testJoinProviderHappyCase_WithBrokenCache_WhenPreloaded {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    BrokenCacheModel *provider = [[BrokenCacheModel alloc] initWithProvider:source];
+    JoinProvider *target = [[JoinProvider alloc] initWithProvider:provider andProvider:provider];
+
+    [source provideAsset:@"Horse"];
+    [source provideAsset:@"Cow"];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"[Horse + Horse]");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
+- (void) testJoinProviderHappyCase_WithBrokenCache_WhenWaiting {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"promise"];
+    AssetSource *source = [[AssetSource alloc] init];
+    BrokenCacheModel *provider = [[BrokenCacheModel alloc] initWithProvider:source];
+    JoinProvider *target = [[JoinProvider alloc] initWithProvider:provider andProvider:provider];
+
+    [target.promiseForAsset then:^id (NSString * value) {
+
+        XCTAssertEqualObjects(value, @"[Horse + Horse]");
+
+        [expectation fulfill];
+        return nil;
+    }];
+
+    [source provideAsset:@"Horse"];
+    [source provideAsset:@"Cow"];
+
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+}
+
 @end
