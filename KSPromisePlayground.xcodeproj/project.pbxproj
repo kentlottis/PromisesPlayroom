@@ -15,6 +15,18 @@
 		0DE1FCA91E85B49A003F4023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCA71E85B49A003F4023 /* LaunchScreen.storyboard */; };
 		0DE1FCB41E85B49A003F4023 /* KSPromisePlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCB31E85B49A003F4023 /* KSPromisePlaygroundTests.m */; };
 		0DE1FCBF1E85B570003F4023 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1FCBE1E85B570003F4023 /* Podfile */; };
+		0DE1FCC71E85F4E7003F4023 /* AssetSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCC61E85F4E7003F4023 /* AssetSource.m */; };
+		0DE1FCC81E85F4E7003F4023 /* AssetSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCC61E85F4E7003F4023 /* AssetSource.m */; };
+		0DE1FCCB1E85F59F003F4023 /* AssetProviderBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCCA1E85F59F003F4023 /* AssetProviderBase.m */; };
+		0DE1FCCC1E85F59F003F4023 /* AssetProviderBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCCA1E85F59F003F4023 /* AssetProviderBase.m */; };
+		0DE1FCCF1E85F65C003F4023 /* BrokenCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCCE1E85F65C003F4023 /* BrokenCacheModel.m */; };
+		0DE1FCD01E85F65C003F4023 /* BrokenCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCCE1E85F65C003F4023 /* BrokenCacheModel.m */; };
+		0DE1FCD31E85F74B003F4023 /* CorrectedCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCD21E85F74B003F4023 /* CorrectedCacheModel.m */; };
+		0DE1FCD41E85F74B003F4023 /* CorrectedCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCD21E85F74B003F4023 /* CorrectedCacheModel.m */; };
+		0DE1FCD71E85F7EF003F4023 /* WorkingCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCD61E85F7EF003F4023 /* WorkingCacheModel.m */; };
+		0DE1FCD81E85F7EF003F4023 /* WorkingCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCD61E85F7EF003F4023 /* WorkingCacheModel.m */; };
+		0DE1FCDB1E85F874003F4023 /* StupidAssetConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCDA1E85F874003F4023 /* StupidAssetConsumer.m */; };
+		0DE1FCDC1E85F874003F4023 /* StupidAssetConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1FCDA1E85F874003F4023 /* StupidAssetConsumer.m */; };
 		6348FCCD9CE49E3010261139 /* libPods-KSPromisePlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0364646F8D24C05134BF84C9 /* libPods-KSPromisePlayground.a */; };
 		B11FDE9F647240C8AD9C75B8 /* libPods-KSPromisePlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A28B46F3DD9FD031A21FBF86 /* libPods-KSPromisePlaygroundTests.a */; };
 /* End PBXBuildFile section */
@@ -45,6 +57,19 @@
 		0DE1FCB31E85B49A003F4023 /* KSPromisePlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPromisePlaygroundTests.m; sourceTree = "<group>"; };
 		0DE1FCB51E85B49A003F4023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE1FCBE1E85B570003F4023 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0DE1FCC41E85F3BF003F4023 /* AssetSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetSource.h; sourceTree = "<group>"; };
+		0DE1FCC51E85F40A003F4023 /* AssetProviderProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetProviderProtocol.h; sourceTree = "<group>"; };
+		0DE1FCC61E85F4E7003F4023 /* AssetSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetSource.m; sourceTree = "<group>"; };
+		0DE1FCC91E85F59F003F4023 /* AssetProviderBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetProviderBase.h; sourceTree = "<group>"; };
+		0DE1FCCA1E85F59F003F4023 /* AssetProviderBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetProviderBase.m; sourceTree = "<group>"; };
+		0DE1FCCD1E85F65C003F4023 /* BrokenCacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrokenCacheModel.h; sourceTree = "<group>"; };
+		0DE1FCCE1E85F65C003F4023 /* BrokenCacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrokenCacheModel.m; sourceTree = "<group>"; };
+		0DE1FCD11E85F74B003F4023 /* CorrectedCacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorrectedCacheModel.h; sourceTree = "<group>"; };
+		0DE1FCD21E85F74B003F4023 /* CorrectedCacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorrectedCacheModel.m; sourceTree = "<group>"; };
+		0DE1FCD51E85F7EF003F4023 /* WorkingCacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkingCacheModel.h; sourceTree = "<group>"; };
+		0DE1FCD61E85F7EF003F4023 /* WorkingCacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkingCacheModel.m; sourceTree = "<group>"; };
+		0DE1FCD91E85F874003F4023 /* StupidAssetConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StupidAssetConsumer.h; sourceTree = "<group>"; };
+		0DE1FCDA1E85F874003F4023 /* StupidAssetConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StupidAssetConsumer.m; sourceTree = "<group>"; };
 		204CD7D3B0F50C2E6535F2F6 /* Pods-KSPromisePlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPromisePlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSPromisePlayground/Pods-KSPromisePlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		82E8440C84C68308931C578F /* Pods-KSPromisePlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPromisePlaygroundTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSPromisePlaygroundTests/Pods-KSPromisePlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 		A28B46F3DD9FD031A21FBF86 /* libPods-KSPromisePlaygroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSPromisePlaygroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,14 +121,8 @@
 		0DE1FC981E85B49A003F4023 /* KSPromisePlayground */ = {
 			isa = PBXGroup;
 			children = (
-				0DE1FC9C1E85B49A003F4023 /* AppDelegate.h */,
-				0DE1FC9D1E85B49A003F4023 /* AppDelegate.m */,
-				0DE1FC9F1E85B49A003F4023 /* ViewController.h */,
-				0DE1FCA01E85B49A003F4023 /* ViewController.m */,
-				0DE1FCA21E85B49A003F4023 /* Main.storyboard */,
-				0DE1FCA51E85B49A003F4023 /* Assets.xcassets */,
-				0DE1FCA71E85B49A003F4023 /* LaunchScreen.storyboard */,
-				0DE1FCAA1E85B49A003F4023 /* Info.plist */,
+				0DE1FCC11E85F2F0003F4023 /* PromiseExamples */,
+				0DE1FCC21E85F31D003F4023 /* Application */,
 				0DE1FC991E85B49A003F4023 /* Supporting Files */,
 			);
 			path = KSPromisePlayground;
@@ -124,6 +143,41 @@
 				0DE1FCB51E85B49A003F4023 /* Info.plist */,
 			);
 			path = KSPromisePlaygroundTests;
+			sourceTree = "<group>";
+		};
+		0DE1FCC11E85F2F0003F4023 /* PromiseExamples */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1FCC41E85F3BF003F4023 /* AssetSource.h */,
+				0DE1FCC51E85F40A003F4023 /* AssetProviderProtocol.h */,
+				0DE1FCC61E85F4E7003F4023 /* AssetSource.m */,
+				0DE1FCC91E85F59F003F4023 /* AssetProviderBase.h */,
+				0DE1FCCA1E85F59F003F4023 /* AssetProviderBase.m */,
+				0DE1FCCD1E85F65C003F4023 /* BrokenCacheModel.h */,
+				0DE1FCCE1E85F65C003F4023 /* BrokenCacheModel.m */,
+				0DE1FCD11E85F74B003F4023 /* CorrectedCacheModel.h */,
+				0DE1FCD21E85F74B003F4023 /* CorrectedCacheModel.m */,
+				0DE1FCD51E85F7EF003F4023 /* WorkingCacheModel.h */,
+				0DE1FCD61E85F7EF003F4023 /* WorkingCacheModel.m */,
+				0DE1FCD91E85F874003F4023 /* StupidAssetConsumer.h */,
+				0DE1FCDA1E85F874003F4023 /* StupidAssetConsumer.m */,
+			);
+			name = PromiseExamples;
+			sourceTree = "<group>";
+		};
+		0DE1FCC21E85F31D003F4023 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1FC9C1E85B49A003F4023 /* AppDelegate.h */,
+				0DE1FC9D1E85B49A003F4023 /* AppDelegate.m */,
+				0DE1FC9F1E85B49A003F4023 /* ViewController.h */,
+				0DE1FCA01E85B49A003F4023 /* ViewController.m */,
+				0DE1FCA21E85B49A003F4023 /* Main.storyboard */,
+				0DE1FCA51E85B49A003F4023 /* Assets.xcassets */,
+				0DE1FCA71E85B49A003F4023 /* LaunchScreen.storyboard */,
+				0DE1FCAA1E85B49A003F4023 /* Info.plist */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		8D87D9E02625E4650F7626F3 /* Frameworks */ = {
@@ -350,7 +404,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE1FCD31E85F74B003F4023 /* CorrectedCacheModel.m in Sources */,
 				0DE1FCA11E85B49A003F4023 /* ViewController.m in Sources */,
+				0DE1FCCF1E85F65C003F4023 /* BrokenCacheModel.m in Sources */,
+				0DE1FCC71E85F4E7003F4023 /* AssetSource.m in Sources */,
+				0DE1FCDB1E85F874003F4023 /* StupidAssetConsumer.m in Sources */,
+				0DE1FCD71E85F7EF003F4023 /* WorkingCacheModel.m in Sources */,
+				0DE1FCCB1E85F59F003F4023 /* AssetProviderBase.m in Sources */,
 				0DE1FC9E1E85B49A003F4023 /* AppDelegate.m in Sources */,
 				0DE1FC9B1E85B49A003F4023 /* main.m in Sources */,
 			);
@@ -361,6 +421,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE1FCB41E85B49A003F4023 /* KSPromisePlaygroundTests.m in Sources */,
+				0DE1FCDC1E85F874003F4023 /* StupidAssetConsumer.m in Sources */,
+				0DE1FCCC1E85F59F003F4023 /* AssetProviderBase.m in Sources */,
+				0DE1FCD41E85F74B003F4023 /* CorrectedCacheModel.m in Sources */,
+				0DE1FCC81E85F4E7003F4023 /* AssetSource.m in Sources */,
+				0DE1FCD81E85F7EF003F4023 /* WorkingCacheModel.m in Sources */,
+				0DE1FCD01E85F65C003F4023 /* BrokenCacheModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
