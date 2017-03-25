@@ -1,0 +1,8 @@
+Simple, IP-free space to mess around with various Promise concepts.
+Initially, just looking at the optimal way to expose a cached resource using KSPromise.
+
+Up next: 
+
+* cached-resource acid tests
+* other Promise packages
+* Swift
