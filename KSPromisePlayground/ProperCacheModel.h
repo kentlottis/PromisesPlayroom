@@ -2,7 +2,7 @@
 #import "AssetProviderBase.h"
 #import "KSDeferred.h"
 
-@interface WorkingCacheModel: AssetProviderBase
+@interface ProperCacheModel: AssetProviderBase
 @property (nonatomic, strong) KSDeferred *currentDeferred;
 -(void)clearCache;
 @end

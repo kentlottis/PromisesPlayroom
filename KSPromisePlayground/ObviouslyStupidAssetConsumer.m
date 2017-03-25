@@ -1,14 +1,6 @@
-#import "StupidAssetConsumer.h"
+#import "ObviouslyStupidAssetConsumer.h"
 
-@implementation StupidAssetConsumer
--(instancetype) initWithName:(NSString *)name provider:(id<AssetProviderProtocol>)provider {
-    self = [super initWithProvider:provider];
-    if (self) {
-        _name = name;
-    }
-    return self;
-}
-
+@implementation ObviouslyStupidAssetConsumer
 -(KSPromise *) promiseForAsset {
     KSDeferred *deferred = [KSDeferred defer];
 

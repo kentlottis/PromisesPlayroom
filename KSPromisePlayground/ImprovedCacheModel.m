@@ -1,6 +1,6 @@
-#import "CorrectedCacheModel.h"
+#import "ImprovedCacheModel.h"
 
-@implementation FixedCacheModel
+@implementation ImprovedCacheModel
 -(instancetype) initWithProvider: (id<AssetProviderProtocol>) provider {
     self = [super initWithProvider:provider];
     if (self) {

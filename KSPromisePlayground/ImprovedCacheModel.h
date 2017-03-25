@@ -2,7 +2,7 @@
 #import "AssetProviderBase.h"
 #import "KSDeferred.h"
 
-@interface FixedCacheModel: AssetProviderBase
+@interface ImprovedCacheModel: AssetProviderBase
 @property (nonatomic, strong) NSMutableArray<KSDeferred *> *currentDeferreds;
 @end
 
